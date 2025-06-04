@@ -215,7 +215,7 @@ Introduction [medium.com](https://medium.com/@s12deff/earlybird-apc-code-injecti
 
 ---
 
-### Threat Hijacking Injection
+### Thread Hijacking Injection
 
 This technique is effective because it doesn’t require creating a new thread — it uses an existing one. First, allocate memory in the target process using `VirtualAllocEx`, then write your payload with `WriteProcessMemory`. Next, suspend the victim thread with `SuspendThread`, modify its execution flow using `GetThreadContext` and `SetThreadContext`, and finally resume it with ResumeThread to execute your code.
 
